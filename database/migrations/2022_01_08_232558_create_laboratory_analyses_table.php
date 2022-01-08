@@ -14,12 +14,11 @@ class CreateLaboratoryAnalysesTable extends Migration
     public function up()
     {
         Schema::create('laboratory_analyses', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->timestamps();
             $table->foreignId('laboratory_id')->constrained()->cascadeOnDelete();
             $table->foreignId('analysis_id')->constrained();
             $table->decimal('price');
-            $table->primary(['id', 'laboratory_id']);
         });
     }
 
