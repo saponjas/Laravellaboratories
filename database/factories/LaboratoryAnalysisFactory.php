@@ -14,7 +14,9 @@ class LaboratoryAnalysisFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "laboratory_id" => $this->faker->numberBetween(1, 5),
+            "analysis_id" => $this->faker->numberBetween(1, 15),
+            "price" => $this->faker->randomFloat(2, 100, 10000),
         ];
     }
 }

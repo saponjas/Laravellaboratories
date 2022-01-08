@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Analysis;
 use Illuminate\Database\Seeder;
 
 class AnalysisSeeder extends Seeder
@@ -13,6 +14,6 @@ class AnalysisSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Analysis::factory(15)->create();
     }
 }

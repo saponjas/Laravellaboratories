@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\LaboratoryAnalysis;
 use Illuminate\Database\Seeder;
 
 class LaboratoryAnalysisSeeder extends Seeder
@@ -13,6 +14,6 @@ class LaboratoryAnalysisSeeder extends Seeder
      */
     public function run()
     {
-        //
+        LaboratoryAnalysis::factory(32)->create();
     }
 }
