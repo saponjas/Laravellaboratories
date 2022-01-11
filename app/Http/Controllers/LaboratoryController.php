@@ -37,7 +37,16 @@ class LaboratoryController extends Controller
      */
     public function show(Laboratory $laboratory)
     {
-        return response()->json($laboratory);
+        return response()->json([
+            "id" => $laboratory->id,
+            "name" => $laboratory->name,
+            "created_at" => $laboratory->created_at,
+            "updated_at" => $laboratory->updated_at,
+            "address" => $laboratory->address,
+            "phone" => $laboratory->phone,
+            "email" => $laboratory->email,
+            "analyses" => $laboratory->analyses,
+        ]);
     }
 
     /**
